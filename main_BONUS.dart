@@ -8,9 +8,7 @@ void main() {
 
   double? x = weatherData[2]['temp']
   ?? weatherData[0]['wind']
-  ?? ((weatherData[1]['temp'] ?? 0) >= 4.5
-    ? weatherData[1]['temp']
-    : weatherData[1]['wind']);
+  ?? (4.5 >= (weatherData[1]['temp'] ?? 0) ? weatherData[1]['temp'] : weatherData[1]['wind']);
 
   print(x);
 
